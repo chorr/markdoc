@@ -8,3 +8,5 @@ MANIFEST
 distribute-*
 doc/.tmp/
 doc/.html/
+.idea/
+*.iml
