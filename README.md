@@ -1,94 +1,15 @@
 # Markdoc
 
-Markdoc is a lightweight Markdown-based wiki system. It’s been designed to allow
-you to create and manage wikis as quickly and easily as possible.
+Markdoc은 매우 가벼운 Markdown 기반 위키 시스템입니다. 원본 소스가 더 이상 유지 보수되지 않으며
+필요한 부분을 수정해서 사용하기 위해 포크 하였습니다.
 
+## 수정된 부분
 
-## What is it good for?
+- 기존에는 xhtml 문서 형태로 제공되었던 부분을 모두 html 문서로 수정
 
-Potential use cases for Markdoc include, but aren’t limited to:
+## Installation
 
-*   **Technical Documentation/Manuals**  
-    Markdoc can be used to write and render hand-written guides and manuals for
-    software. Such documentation will normally be separate from
-    automatically-generated API documentation, and might give a higher-level
-    view than API docs alone. It might be used for client documentation for
-    web/desktop applications, or even developer documentation for frameworks.
-
-*   **Internal Project Wikis**  
-    Markdoc wikis consist of a single plain-text file per page. By combining a
-    wiki with a DVCS (such as [Mercurial][] or [Git][]), you can collaborate
-    with several other people. Use the DVCS to track, share and merge changes
-    with one another, and view the wiki’s history.
-    
-  [Mercurial]: http://mercurial.selenic.com/
-  [Git]: http://git-scm.com/
-
-*   **Static Site Generation**  
-    Markdoc converts wikis into raw HTML files and media. This allows you to
-    manage a blog, personal website or a collection of pages in a Markdoc wiki,
-    perhaps with custom CSS styles, and publish the rendered HTML to a website.
-    Markdoc need not be installed on the hosting site, since the resultant HTML
-    is completely independent.
-
-
-## Cool Features
-
-*   Set up [Google Analytics][] tracking in one line of configuration.
-
-*   [Barebones][] wikis that just look like directories with Markdown-formatted
-    text files in them.
-
-*   A built-in HTTP server and WSGI application to serve up a compiled wiki with
-    a single command.
-
-*   Continuous builds (via `rsync`) mean the server can keep running whilst
-    Markdoc re-compiles the wiki. Just refresh your browser to see the changes.
-
-*   Add [Pygments][]-powered syntax highlighting to your Markdoc wiki with a
-    single [configuration parameter][syntax-highlighting].
-
-*   Markdoc is [public domain software][licensing]. It will always be completely
-    free to use, and you can redistribute it (in part or in whole) under any
-    circumstances (open-source, proprietary or otherwise) with no attribution or
-    encumberances.
-
-[google analytics]: http://markdoc.org/ref/configuration#metadata
-[barebones]: http://markdoc.org/tips/barebones
-[pygments]: http://pygments.org/
-[syntax-highlighting]: http://markdoc.org/tips/syntax-highlighting
-[licensing]: http://markdoc.org/about#license
-
-
-## Quickstart
-
-### Requirements
-
-The minimum requirements to run the Markdoc utility are:
-
-  * Python 2.4 or later (2.5+ highly recommended)
-  * A UNIX (or at least POSIX-compliant) operating system
-  * [rsync](http://www.samba.org/rsync/) -- installed out of the box with most
-    modern OSes, including Mac OS X and Ubuntu. In the future Markdoc may
-    include a pure-Python implementation.
-
-
-### Installation
-
-    $ easy_install Markdoc  # OR
-    $ pip install Markdoc
-
-
-### Making a Wiki
-
-    markdoc init my-wiki
-    cd my-wiki/
-    vim wiki/somefile.md
-    # ... write some documentation ...
-    markdoc build
-    markdoc serve
-    # .. open http://localhost:8008/ in a browser ...
-
+    $ python setup.py install
 
 ## (Un)license
 
