@@ -12,7 +12,7 @@ from markdoc.render import make_relative
 if not mimetypes.inited:
     mimetypes.init()
 # Assume all HTML files are XHTML.
-mimetypes.types_map['.html'] = mimetypes.types_map['.xhtml']
+# mimetypes.types_map['.html'] = mimetypes.types_map['.xhtml']
 
 
 class MarkdocWSGIApplication(object):
@@ -162,7 +162,7 @@ class MarkdocWSGIApplication(object):
             
             template = self.config.template_env.get_template('%d.html' % status)
             response.unicode_body = template.render(context)
-            response.content_type = mimetypes.types_map['.xhtml']
+            response.content_type = mimetypes.types_map['.html']
         else:
             del response.content_length
             del response.content_type

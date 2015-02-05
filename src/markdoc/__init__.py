@@ -4,7 +4,7 @@ import logging
 import os.path as p
 
 
-__version__ = '0.8.1'
+__version__ = '0.8.2'
 
 
 static_dir = p.join(p.dirname(__file__), 'static')
